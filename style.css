@@ -1,0 +1,52 @@
+/* ==========================================================
+   style.css - the plain CSS part of my portfolio.
+   Tailwind handles most layout and styling in index.html.
+   This file holds the things I wrote by hand.
+   ========================================================== */
+
+/* 1. Smooth scrolling for the navbar links.
+   scroll-padding-top stops the sticky navbar from covering
+   the top of a section after a link is clicked. */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  color-scheme: dark; /* dark form fields and scrollbar to match the dark theme */
+}
+
+/* 2. CSS keyframe animation.
+   The hero text fades in and slides up once when the page loads. */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-text {
+  animation: fade-up 0.8s ease-out both;
+}
+
+/* 3. Keyboard focus: a clear sky-blue outline when someone tabs through
+   links and form fields. */
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline: 3px solid #669BBC;
+  outline-offset: 3px;
+}
+
+/* 4. Respect visitors who turn off animations in their system settings. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero-text {
+    animation: none;
+  }
+}

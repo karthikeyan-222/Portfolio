@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Karthikeyan B, first-year Computer Science student at Scaler School of Technology.">
+  <title>Karthikeyan B | Portfolio</title>
+
+  <!-- Tailwind CSS (CDN build) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Gives my palette (Fiery Ocean) names I can use as classes: bg-cream, text-navy, ... -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#FDF0D5',
+            navy: '#003049',
+            sky: '#669BBC',
+            crimson: '#C1121F',
+            maroon: '#780000'
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- My plain CSS: smooth scroll, keyframe animation, focus styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-navy text-cream font-sans antialiased">
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="sticky top-0 z-50 bg-navy/95 border-b border-sky/30">
+    <nav class="max-w-5xl mx-auto px-6 py-3 flex flex-col sm:flex-row items-center justify-between gap-2" aria-label="Main navigation">
+      <a href="#home" class="text-xl font-bold text-sky">Karthikeyan B</a>
+      <ul class="flex gap-5 text-sm sm:text-base font-medium">
+        <li><a href="#home" class="transition-colors hover:text-sky">Home</a></li>
+        <li><a href="#about" class="transition-colors hover:text-sky">About</a></li>
+        <li><a href="#skills" class="transition-colors hover:text-sky">Skills</a></li>
+        <li><a href="#projects" class="transition-colors hover:text-sky">Projects</a></li>
+        <li><a href="#contact" class="transition-colors hover:text-sky">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section id="home">
+      <div class="max-w-5xl mx-auto px-6 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+
+        <div class="hero-text text-center md:text-left">
+          <p class="text-lg text-cream/80">Hello, I'm</p>
+          <h1 class="text-5xl md:text-7xl font-bold text-cream mt-2">Karthikeyan B</h1>
+          <p class="text-2xl font-semibold mt-4">Aspiring Software Engineer</p>
+          <p class="text-lg leading-relaxed max-w-md mx-auto md:mx-0 mt-4">
+            First-year Computer Science student who enjoys problem-solving and building practical projects.
+          </p>
+          <div class="flex flex-wrap justify-center md:justify-start gap-4 mt-8">
+            <a href="#projects" class="bg-crimson text-white font-semibold px-6 py-3 rounded-lg transition hover:bg-maroon">View Projects</a>
+            <a href="#contact" class="border-2 border-cream text-cream font-semibold px-6 py-3 rounded-lg transition hover:bg-cream hover:text-navy">Contact Me</a>
+          </div>
+        </div>
+
+        <div class="order-first md:order-last">
+          <img
+            src="profile.jpg"
+            alt="Portrait of Karthikeyan B in a grey suit and navy tie"
+            width="880" height="1060"
+            class="w-56 md:w-72 mx-auto aspect-[4/5] object-cover object-top rounded-2xl border-4 border-sky shadow-lg">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section id="about" class="bg-black/20" aria-labelledby="about-title">
+      <div class="max-w-3xl mx-auto px-6 py-16">
+        <h2 id="about-title" class="text-3xl font-bold text-sky">About Me</h2>
+        <div class="mt-6 space-y-4 text-lg leading-relaxed">
+          <p>
+            I'm a first-year Computer Science student at Scaler School of Technology with a strong interest in
+            software engineering and problem-solving.
+          </p>
+          <p>
+            I have a strong foundation in programming and computer science fundamentals, with hands-on knowledge
+            of Java, HTML, CSS, and JavaScript. I'm currently gaining my first industry experience as a
+            Web &amp; Technical Intern at Falzen, where I'm looking forward to applying my skills to real-world
+            projects and learning from practical experience.
+          </p>
+          <p>
+            I'm passionate about exploring new technologies, building practical projects, and strengthening my
+            technical skills.
+          </p>
+          <p>
+            My goal is to grow into a skilled software engineer and contribute to impactful products. I'm always
+            open to connecting with students, developers, and professionals to learn, collaborate, and grow.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section id="skills" aria-labelledby="skills-title">
+      <div class="max-w-5xl mx-auto px-6 py-16">
+        <h2 id="skills-title" class="text-3xl font-bold text-sky">Skills</h2>
+        <ul class="flex flex-wrap gap-3 mt-6">
+          <li class="bg-white/5 border border-sky text-cream font-medium px-5 py-2 rounded-full transition hover:bg-sky hover:text-navy">HTML</li>
+          <li class="bg-white/5 border border-sky text-cream font-medium px-5 py-2 rounded-full transition hover:bg-sky hover:text-navy">CSS</li>
+          <li class="bg-white/5 border border-sky text-cream font-medium px-5 py-2 rounded-full transition hover:bg-sky hover:text-navy">Java</li>
+          <li class="bg-white/5 border border-sky text-cream font-medium px-5 py-2 rounded-full transition hover:bg-sky hover:text-navy">JavaScript</li>
+          <li class="bg-white/5 border border-sky text-cream font-medium px-5 py-2 rounded-full transition hover:bg-sky hover:text-navy">Git</li>
+          <li class="bg-white/5 border border-sky text-cream font-medium px-5 py-2 rounded-full transition hover:bg-sky hover:text-navy">Figma</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== EDUCATION ========== -->
+    <section id="education" class="bg-black/20" aria-labelledby="education-title">
+      <div class="max-w-5xl mx-auto px-6 py-16">
+        <h2 id="education-title" class="text-3xl font-bold text-sky">Education</h2>
+        <article class="bg-white/5 border border-sky/40 rounded-xl p-6 mt-6 max-w-xl">
+          <h3 class="text-xl font-bold">CS & AI</h3>
+          <p class="mt-1">Scaler School of Technology</p>
+          <p class="mt-1 text-cream/80">Batch of 2030</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
+    <section id="projects" aria-labelledby="projects-title">
+      <div class="max-w-5xl mx-auto px-6 py-16">
+        <h2 id="projects-title" class="text-3xl font-bold text-sky">Projects</h2>
+
+        <div class="grid md:grid-cols-2 gap-6 mt-6">
+
+          <!-- Project 1 -->
+          <article class="bg-white/5 border border-sky/40 rounded-xl overflow-hidden flex flex-col transition duration-300 hover:-translate-y-1 hover:border-sky">
+            <div class="bg-black/30 text-cream px-6 py-8">
+              <h3 class="text-2xl font-bold">Student Portal</h3>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <p class="leading-relaxed">
+                A lab assignment built as a student portal page. It has a profile table, a skills list,
+                a weekly schedule table and a course registration form.
+              </p>
+              <ul class="flex flex-wrap gap-2 mt-4 text-sm font-medium">
+                <li class="bg-navy border border-sky px-3 py-1 rounded-full">HTML5</li>
+                <li class="bg-navy border border-sky px-3 py-1 rounded-full">CSS3</li>
+              </ul>
+              <div class="mt-auto pt-6">
+                <a href="https://karthikeyan-222.github.io/Student-portal/" target="_blank" rel="noopener noreferrer"
+                   class="inline-block bg-crimson text-white font-semibold px-5 py-2 rounded-lg transition hover:bg-maroon">
+                  View Live Project
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="bg-white/5 border border-sky/40 rounded-xl overflow-hidden flex flex-col transition duration-300 hover:-translate-y-1 hover:border-sky">
+            <div class="bg-maroon text-cream px-6 py-8">
+              <h3 class="text-2xl font-bold">Flexbox Quest</h3>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <p class="leading-relaxed">
+                A game-styled page for practising Flexbox. It has a HUD for lives, coins, level and score,
+                a game area with a player and platforms, on-screen controls, an inventory grid, a quest
+                tracker and a Display Lab.
+              </p>
+              <ul class="flex flex-wrap gap-2 mt-4 text-sm font-medium">
+                <li class="bg-navy border border-sky px-3 py-1 rounded-full">HTML</li>
+                <li class="bg-navy border border-sky px-3 py-1 rounded-full">CSS</li>
+              </ul>
+              <div class="mt-auto pt-6">
+                <a href="https://karthikeyan-222.github.io/Flexbox-Quest/" target="_blank" rel="noopener noreferrer"
+                   class="inline-block bg-crimson text-white font-semibold px-5 py-2 rounded-lg transition hover:bg-maroon">
+                  View Live Project
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== EXPERIENCE ========== -->
+    <section id="experience" class="bg-black/20" aria-labelledby="experience-title">
+      <div class="max-w-5xl mx-auto px-6 py-16">
+        <h2 id="experience-title" class="text-3xl font-bold text-sky">Experience</h2>
+        <article class="bg-white/5 border border-sky/40 rounded-xl p-6 mt-6 max-w-xl">
+          <h3 class="text-xl font-bold">Web &amp; Technical Intern</h3>
+          <p class="mt-1">Falzen</p>
+          <p class="mt-1 text-cream/80">My first industry experience.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="max-w-5xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10">
+
+        <div>
+          <h2 id="contact-title" class="text-3xl font-bold text-sky">Contact</h2>
+          <p class="mt-6 text-lg leading-relaxed">
+            I'm open to connecting with students, developers and professionals. Send me a message or find me here.
+          </p>
+          <ul class="mt-6 space-y-2 text-lg">
+            <li>
+              Email:
+              <a href="mailto:karthigeyanbalu100@gmail.com" class="font-semibold underline transition-colors hover:text-sky">karthigeyanbalu100@gmail.com</a>
+            </li>
+            <li>
+              LinkedIn:
+              <a href="https://www.linkedin.com/in/karthikeyan-b-42a600381" target="_blank" rel="noopener noreferrer" class="font-semibold underline transition-colors hover:text-sky">karthikeyan-b</a>
+            </li>
+            <li>
+              GitHub:
+              <a href="https://github.com/karthikeyan-222" target="_blank" rel="noopener noreferrer" class="font-semibold underline transition-colors hover:text-sky">karthikeyan-222</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Frontend-only form: opens the visitor's email app -->
+        <form action="mailto:karthigeyanbalu100@gmail.com" method="post" enctype="text/plain" class="bg-white/5 border border-sky/40 rounded-xl p-6 space-y-4">
+          <div>
+            <label for="name" class="block font-medium">Name</label>
+            <input type="text" id="name" name="name" required class="w-full bg-navy text-cream border border-sky rounded-lg px-4 py-2 mt-1">
+          </div>
+          <div>
+            <label for="email" class="block font-medium">Email</label>
+            <input type="email" id="email" name="email" required class="w-full bg-navy text-cream border border-sky rounded-lg px-4 py-2 mt-1">
+          </div>
+          <div>
+            <label for="message" class="block font-medium">Message</label>
+            <textarea id="message" name="message" rows="4" required class="w-full bg-navy text-cream border border-sky rounded-lg px-4 py-2 mt-1"></textarea>
+          </div>
+          <button type="submit" class="bg-crimson text-white font-semibold px-6 py-3 rounded-lg transition hover:bg-maroon">Send Message</button>
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-black/30 text-cream/80 text-center text-sm py-6 px-6">
+    <p>&copy; 2026 Karthikeyan B. Built with HTML, CSS and Tailwind CSS.</p>
+  </footer>
+
+</body>
+</html>
