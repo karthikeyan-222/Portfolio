@@ -40,7 +40,35 @@ button:focus-visible {
   outline-offset: 3px;
 }
 
-/* 4. Respect visitors who turn off animations in their system settings. */
+/* 4. Scroll reveal (no JavaScript).
+   Elements with the class "reveal" fade in and slide up while they
+   scroll into view. animation-timeline: view() ties the animation to
+   the element's position in the viewport instead of to time.
+   The keyframes animate opacity and the separate "translate" property,
+   so they do not clash with Tailwind's hover transforms.
+   If a browser does not support this, the elements just show normally. */
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    translate: 0 40px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .reveal {
+      animation: reveal-up linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 35%;
+    }
+  }
+}
+
+/* 5. Respect visitors who turn off animations in their system settings. */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
